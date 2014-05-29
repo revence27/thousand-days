@@ -15,13 +15,16 @@ THE_DATABASE  = psycopg2.connect(database = __DEFAULTS['NAME'],
 # Load the report(s).
 # Find a report.
 class ThouReport:
+  'The base class for all "RapidSMS 1000 Days" reports.'
   created   = False
   columned  = False
 
   def __init__(self, msg):
+    'Initialised with the Message object to which it is coupled.'
     self.msg  = msg
 
   def __insertables(self, fds):
+    '''Returns a hash of all the columns that will be affected by an insertion of this report into the database. The column name is the key, with its value.'''
     cvs   = {}
     ents  = self.msg.entries
     for fx in ents:
@@ -36,7 +39,10 @@ class ThouReport:
           raise Exception, ('No value supplied for column \'%s\' (%s)' % (fx, str(curfd)))
     return cvs
 
+  # TODO: Consider the message field classes' declared default.
   def save(self):
+    '''This method saves the report object into the table for that report class, returning the index as an integer.
+It is not idempotent at this level; further constraints should be added by inheriting classes.'''
     tbl, cols = self.msg.__class__.create_in_db(self.__class__)
     cvs       = self.__insertables(cols)
     curz      = THE_DATABASE.cursor()
