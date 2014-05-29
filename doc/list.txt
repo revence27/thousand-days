@@ -1,3 +1,7 @@
 Audience.txt
 The Database System.haml
 The Message & Report Models.haml
+parser.html
+rapid1000messages.html
+reports.html
+rapid1000reports.html

@@ -64,19 +64,29 @@ body {
         margin-left: 25%; } }
     body #main .docs .doc {
       font-variant-settings: "diag", "dlig"; }
-      body #main .docs .doc .info .single .screenshot {
-        page: screenpage;
-        width: 100%;
-        page-break-before: always;
-        page-break-after: always;
-        display: block;
-        border-radius: 1em 1em 1em 1em;
-        box-shadow: 0.125em 0.125em 0.125em rgba(0, 0, 0, 0.5);
-        border: solid 1px #402619; }
-        body #main .docs .doc .info .single .screenshot.withtitle {
-          string-set: scrtitle attr(alt); }
-      body #main .docs .doc .info .double {
-        column-count: 2; }
+      body #main .docs .doc .info {
+        width: 100%; }
+        body #main .docs .doc .info table {
+          width: 100%;
+          font: inherit !important;
+          font-size: 7pt; }
+        body #main .docs .doc .info .codikos {
+          font-family: "Liberation Mono", monospace;
+          width: inherit;
+          font-size: 70%; }
+        body #main .docs .doc .info .single .screenshot {
+          page: screenpage;
+          width: 100%;
+          page-break-before: always;
+          page-break-after: always;
+          display: block;
+          border-radius: 1em 1em 1em 1em;
+          box-shadow: 0.125em 0.125em 0.125em rgba(0, 0, 0, 0.5);
+          border: solid 1px #402619; }
+          body #main .docs .doc .info .single .screenshot.withtitle {
+            string-set: scrtitle attr(alt); }
+        body #main .docs .doc .info .double {
+          column-count: 2; }
   body #footer {
     page-break-before: always;
     font-size: 7pt;
@@ -102,3 +112,6 @@ body {
     text-align: center;
     color: #9c5c3d;
     font-variant: small-caps; } }
+
+@page pydocpage {
+  margin: 0.125em; }

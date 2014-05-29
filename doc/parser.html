@@ -1,0 +1,77 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module parser</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>parser</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/revence/Documents/Hacks/thousand/thoureport/messages/parser.py">/Users/revence/Documents/Hacks/thousand/thoureport/messages/parser.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;encoding:&nbsp;utf-8</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="psycopg2.html">psycopg2</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="parser.html#ThouField">ThouField</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ThouField">class <strong>ThouField</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Class&nbsp;defining&nbsp;the&nbsp;field&nbsp;of&nbsp;a&nbsp;"RapidSMS&nbsp;1000&nbsp;Days"&nbsp;message&nbsp;field.<br>
+Has&nbsp;the&nbsp;ability&nbsp;to&nbsp;parse&nbsp;itself&nbsp;from&nbsp;a&nbsp;message&nbsp;string,&nbsp;conditionally&nbsp;pulling&nbsp;several&nbsp;of&nbsp;itself&nbsp;before&nbsp;giving&nbsp;up.<br>
+It&nbsp;also&nbsp;supplies&nbsp;contextual&nbsp;information&nbsp;about&nbsp;its&nbsp;unsuccessful&nbsp;parsing.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ThouField-__init__"><strong>__init__</strong></a>(self, val, many)</dt><dd><tt>Initialise&nbsp;the&nbsp;field&nbsp;and&nbsp;its&nbsp;associated&nbsp;value&nbsp;`val`,&nbsp;specifying&nbsp;whether&nbsp;it&nbsp;is&nbsp;one&nbsp;of&nbsp;`many`&nbsp;associated&nbsp;as&nbsp;a&nbsp;group&nbsp;with&nbsp;the&nbsp;message.</tt></dd></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="ThouField-dbtype"><strong>dbtype</strong></a>(self, it<font color="#909090">=None</font>)<font color="#909090"><font face="helvetica, arial"> from __builtin__.classobj</font></font></dt><dd><tt>Field-level&nbsp;specificiation&nbsp;of&nbsp;the&nbsp;SQL&nbsp;data&nbsp;type&nbsp;to&nbsp;give&nbsp;to&nbsp;the&nbsp;database&nbsp;column&nbsp;that&nbsp;will&nbsp;hold&nbsp;the&nbsp;data&nbsp;held&nbsp;by&nbsp;this&nbsp;field.<br>
+TODO:&nbsp;At&nbsp;present,&nbsp;every&nbsp;field&nbsp;is&nbsp;supposed&nbsp;to&nbsp;be&nbsp;a&nbsp;TEXT.&nbsp;This&nbsp;is&nbsp;clearly&nbsp;false&nbsp;in&nbsp;the&nbsp;case&nbsp;of&nbsp;dates,&nbsp;for&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="ThouField-dbvalue"><strong>dbvalue</strong></a>(self, it, kasa)<font color="#909090"><font face="helvetica, arial"> from __builtin__.classobj</font></font></dt><dd><tt>Returns&nbsp;the&nbsp;value&nbsp;if&nbsp;`it`&nbsp;escaped&nbsp;with&nbsp;the&nbsp;database&nbsp;cursor&nbsp;`kasa`.</tt></dd></dl>
+
+<dl><dt><a name="ThouField-default_dbvalue"><strong>default_dbvalue</strong></a>(self)<font color="#909090"><font face="helvetica, arial"> from __builtin__.classobj</font></font></dt><dd><tt>Returns&nbsp;the&nbsp;string&nbsp;that&nbsp;represents&nbsp;the&nbsp;default&nbsp;DB&nbsp;value.<br>
+TODO:&nbsp;Currently&nbsp;gives&nbsp;no&nbsp;heed&nbsp;to&nbsp;the&nbsp;opinions&nbsp;of&nbsp;the&nbsp;field&nbsp;itself.</tt></dd></dl>
+
+<dl><dt><a name="ThouField-display"><strong>display</strong></a>(self)<font color="#909090"><font face="helvetica, arial"> from __builtin__.classobj</font></font></dt><dd><tt>Returns&nbsp;the&nbsp;descriptive&nbsp;name&nbsp;of&nbsp;this&nbsp;field&nbsp;(useful&nbsp;for&nbsp;displaying&nbsp;database&nbsp;columns&nbsp;without&nbsp;listing&nbsp;the&nbsp;unsigtly&nbsp;column&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="ThouField-expectations"><strong>expectations</strong></a>(self)<font color="#909090"><font face="helvetica, arial"> from __builtin__.classobj</font></font></dt><dd><tt>This&nbsp;method&nbsp;is&nbsp;to&nbsp;be&nbsp;extended&nbsp;to&nbsp;restrict&nbsp;fields&nbsp;to&nbsp;certain&nbsp;pre-determined&nbsp;codes.</tt></dd></dl>
+
+<dl><dt><a name="ThouField-expected"><strong>expected</strong></a>(self, fld)<font color="#909090"><font face="helvetica, arial"> from __builtin__.classobj</font></font></dt><dd><tt>This&nbsp;method&nbsp;is&nbsp;to&nbsp;be&nbsp;extended&nbsp;if&nbsp;the&nbsp;`expectations`&nbsp;mechanism&nbsp;is&nbsp;almost&nbsp;sufficient,&nbsp;but&nbsp;requires&nbsp;some&nbsp;elaborate&nbsp;validation.<br>
+This&nbsp;default&nbsp;one&nbsp;works&nbsp;best&nbsp;on&nbsp;the&nbsp;simple&nbsp;codes&nbsp;that&nbsp;we&nbsp;have,&nbsp;not&nbsp;every&nbsp;possible&nbsp;thing.</tt></dd></dl>
+
+<dl><dt><a name="ThouField-fixed_for_db"><strong>fixed_for_db</strong></a>(self, val)<font color="#909090"><font face="helvetica, arial"> from __builtin__.classobj</font></font></dt><dd><tt>Field-level&nbsp;specification&nbsp;of&nbsp;the&nbsp;necessary&nbsp;escapes&nbsp;for&nbsp;sanitising&nbsp;the&nbsp;data&nbsp;for&nbsp;SQL.<br>
+TODO:&nbsp;This&nbsp;only&nbsp;passes&nbsp;because&nbsp;we&nbsp;are&nbsp;using&nbsp;simple,&nbsp;plain&nbsp;codes&nbsp;in&nbsp;testing.</tt></dd></dl>
+
+<dl><dt><a name="ThouField-is_legal"><strong>is_legal</strong></a>(self, fld)<font color="#909090"><font face="helvetica, arial"> from __builtin__.classobj</font></font></dt><dd><tt>This&nbsp;method&nbsp;is&nbsp;to&nbsp;be&nbsp;extended&nbsp;to&nbsp;restrict&nbsp;fields,&nbsp;in&nbsp;the&nbsp;event&nbsp;that&nbsp;the&nbsp;`expectations`&nbsp;mechanism&nbsp;is&nbsp;insufficient.</tt></dd></dl>
+
+<dl><dt><a name="ThouField-subname"><strong>subname</strong></a>(self)<font color="#909090"><font face="helvetica, arial"> from __builtin__.classobj</font></font></dt><dd><tt>Returns&nbsp;the&nbsp;name&nbsp;of&nbsp;this&nbsp;field&nbsp;as&nbsp;it&nbsp;would&nbsp;be&nbsp;used&nbsp;in&nbsp;composing&nbsp;a&nbsp;column&nbsp;name.</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="ThouField-pull"><strong>pull</strong></a>(self, cod, txt, many<font color="#909090">=False</font>)</dt><dd><tt>A&nbsp;field&nbsp;will&nbsp;process&nbsp;thestring&nbsp;`txt`&nbsp;to&nbsp;parse&nbsp;of&nbsp;a&nbsp;valid&nbsp;object&nbsp;of&nbsp;its&nbsp;class&nbsp;(passed&nbsp;in&nbsp;as&nbsp;`self`&nbsp;and&nbsp;linked&nbsp;to&nbsp;the&nbsp;SMS&nbsp;code&nbsp;passed&nbsp;in&nbsp;as&nbsp;`cod`).<br>
+Error&nbsp;cases&nbsp;are&nbsp;communicated&nbsp;as&nbsp;single-token&nbsp;error&nbsp;codes,&nbsp;strings&nbsp;that&nbsp;should&nbsp;be&nbsp;short,&nbsp;and&nbsp;unique&nbsp;for&nbsp;every&nbsp;error&nbsp;case.<br>
+Returns&nbsp;a&nbsp;triple:&nbsp;the&nbsp;resulting&nbsp;Message&nbsp;object,&nbsp;the&nbsp;array&nbsp;of&nbsp;error&nbsp;codes,&nbsp;and&nbsp;the&nbsp;part&nbsp;of&nbsp;`txt`&nbsp;that&nbsp;has&nbsp;not&nbsp;been&nbsp;consumed&nbsp;to&nbsp;produce&nbsp;the&nbsp;Message&nbsp;object.</tt></dd></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

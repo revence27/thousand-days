@@ -63,8 +63,8 @@ Returns a triple: the resulting Message object, the array of error codes, and th
 
   @classmethod
   def expected(self, fld):
-    'This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.
-This default one works best on the simple codes that we have, not every possible thing.'
+    '''This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.
+This default one works best on the simple codes that we have, not every possible thing.'''
     for exp in self.expectations():
       if exp.lower() == fld.lower():
         return True

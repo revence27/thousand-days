@@ -12,13 +12,21 @@ class Doc
     @name = pth.gsub(/\.haml$/, '').gsub(/\.txt$/, '')  #.gsub(/\W/, ' ')
   end
 
+  def sans_head txt
+    _, rst  = txt.split(/<body[^>]*>/i, 2)
+    ans = rst.split(/<\/body>/i).first
+    ans.gsub(/<(\/)?font[^>]*>/, '').gsub(/ bgcolor="[^"]+"/, '').gsub(/<tt>/, '<div class="codikos">').gsub('</tt>', '</div>')
+  end
+
   def to_html
     statdir = Pathname.new((ENV['STATIC_DIR'] || '/static/').to_s)
     File.open @path do |fch|
       @rod  ||= fch.read
       if @path =~ /\.txt$/i then
         Kramdown::Document.new(@rod).to_html
-      elsif @path =~ /\.haml/i then
+      elsif @path =~ /\.html$/i then
+        sans_head @rod
+      elsif @path =~ /\.haml$/i then
         Haml::Engine.new(@rod).render binding
       else
         @rod

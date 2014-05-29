@@ -1,0 +1,97 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module rapid1000reports</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>rapid1000reports</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/revence/Documents/Hacks/thousand/thoureport/reports/rapid1000reports.py">/Users/revence/Documents/Hacks/thousand/thoureport/reports/rapid1000reports.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="psycopg2.html">psycopg2</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="thoureport.reports.reports.html#ThouReport">thoureport.reports.reports.ThouReport</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="rapid1000reports.html#RedReport">RedReport</a>
+</font></dt><dt><font face="helvetica, arial"><a href="rapid1000reports.html#RevenceReport">RevenceReport</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RedReport">class <strong>RedReport</strong></a>(<a href="thoureport.reports.reports.html#ThouReport">thoureport.reports.reports.ThouReport</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Red&nbsp;Reports<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods inherited from <a href="thoureport.reports.reports.html#ThouReport">thoureport.reports.reports.ThouReport</a>:<br>
+<dl><dt><a name="RedReport-__init__"><strong>__init__</strong></a>(self, msg)</dt><dd><tt>Initialised&nbsp;with&nbsp;the&nbsp;Message&nbsp;object&nbsp;to&nbsp;which&nbsp;it&nbsp;is&nbsp;coupled.</tt></dd></dl>
+
+<dl><dt><a name="RedReport-save"><strong>save</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;saves&nbsp;the&nbsp;report&nbsp;object&nbsp;into&nbsp;the&nbsp;table&nbsp;for&nbsp;that&nbsp;report&nbsp;class,&nbsp;returning&nbsp;the&nbsp;index&nbsp;as&nbsp;an&nbsp;integer.<br>
+It&nbsp;is&nbsp;not&nbsp;idempotent&nbsp;at&nbsp;this&nbsp;level;&nbsp;further&nbsp;constraints&nbsp;should&nbsp;be&nbsp;added&nbsp;by&nbsp;inheriting&nbsp;classes.</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.reports.reports.html#ThouReport">thoureport.reports.reports.ThouReport</a>:<br>
+<dl><dt><a name="RedReport-load"><strong>load</strong></a>(self, msgtxt)<font color="#909090"><font face="helvetica, arial"> from __builtin__.classobj</font></font></dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="thoureport.reports.reports.html#ThouReport">thoureport.reports.reports.ThouReport</a>:<br>
+<dl><dt><strong>columned</strong> = False</dl>
+
+<dl><dt><strong>created</strong> = False</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RevenceReport">class <strong>RevenceReport</strong></a>(<a href="thoureport.reports.reports.html#ThouReport">thoureport.reports.reports.ThouReport</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Testing&nbsp;keyword,&nbsp;Revence&nbsp;Reports<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods inherited from <a href="thoureport.reports.reports.html#ThouReport">thoureport.reports.reports.ThouReport</a>:<br>
+<dl><dt><a name="RevenceReport-__init__"><strong>__init__</strong></a>(self, msg)</dt><dd><tt>Initialised&nbsp;with&nbsp;the&nbsp;Message&nbsp;object&nbsp;to&nbsp;which&nbsp;it&nbsp;is&nbsp;coupled.</tt></dd></dl>
+
+<dl><dt><a name="RevenceReport-save"><strong>save</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;saves&nbsp;the&nbsp;report&nbsp;object&nbsp;into&nbsp;the&nbsp;table&nbsp;for&nbsp;that&nbsp;report&nbsp;class,&nbsp;returning&nbsp;the&nbsp;index&nbsp;as&nbsp;an&nbsp;integer.<br>
+It&nbsp;is&nbsp;not&nbsp;idempotent&nbsp;at&nbsp;this&nbsp;level;&nbsp;further&nbsp;constraints&nbsp;should&nbsp;be&nbsp;added&nbsp;by&nbsp;inheriting&nbsp;classes.</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.reports.reports.html#ThouReport">thoureport.reports.reports.ThouReport</a>:<br>
+<dl><dt><a name="RevenceReport-load"><strong>load</strong></a>(self, msgtxt)<font color="#909090"><font face="helvetica, arial"> from __builtin__.classobj</font></font></dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="thoureport.reports.reports.html#ThouReport">thoureport.reports.reports.ThouReport</a>:<br>
+<dl><dt><strong>columned</strong> = False</dl>
+
+<dl><dt><strong>created</strong> = False</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>DATABASES</strong> = {'default': {'ENGINE': 'django.db.backends.postgresql_psycopg2', 'HOST': 'localhost', 'NAME': 'thousanddays', 'PASSWORD': 'thousanddays', 'USER': 'thousanddays'}}<br>
+<strong>THE_DATABASE</strong> = &lt;connection object at 0x7f8fb04938f0; dsn: 'dbna...password=xxxxxxxxxxxx host=localhost', closed: 0&gt;</td></tr></table>
+</body></html>

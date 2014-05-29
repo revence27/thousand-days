@@ -122,6 +122,22 @@ body
 
         .info
         {
+          width: 100%;
+
+          table
+          {
+            width: 100%;
+            font: inherit!important;
+            font-size: 7pt;
+          }
+
+          .codikos
+          {
+            font-family: $f3;
+            width: inherit;
+            font-size: 70%;
+          }
+
           .single
           {
             .screenshot
@@ -190,4 +206,10 @@ body
     color: $col2;
     font-variant: small-caps;
   }
+}
+
+@page pydocpage
+{
+  //  size: a4 landscape;
+  margin: 0.125em;
 }
