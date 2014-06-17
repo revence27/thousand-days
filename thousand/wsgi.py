@@ -1,3 +1,4 @@
+# vim: expandtab ts=2
 """
 WSGI config for thousand project.
 

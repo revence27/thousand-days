@@ -1,0 +1,119 @@
+
+
+Python: module reports
+
+
+<table width="100%" summary="heading">
+<tr>
+<td> <br>
+ <br><strong>reports</strong>
+</td>
+<td>
+<a href=".">index</a><br><a>/Users/revence/Documents/Hacks/thousand/thoureport/reports/reports.py</a>
+</td>
+</tr>
+</table>
+    <p># encoding: utf-8<br>
+# vim: expandtab ts=2</p>
+<p>
+</p><table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<strong>Modules</strong>
+</td>
+</tr>
+    
+<tr>
+<td>      </td>
+<td> </td>
+<td width="100%"><table width="100%" summary="list"><tr>
+<td width="25%">
+<a href="psycopg2.html">psycopg2</a><br>
+</td>
+<td width="25%">
+<a href="re.html">re</a><br>
+</td>
+<td width="25%"></td>
+<td width="25%"></td>
+</tr></table></td>
+</tr>
+</table><p>
+</p><table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<strong>Classes</strong>
+</td>
+</tr>
+    
+<tr>
+<td>      </td>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>
+<a href="reports.html#ThouReport">ThouReport</a>
+</dt>
+</dl>
+ <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>ThouReport</strong></a>
+</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">The base class for all "RapidSMS 1000 Days" reports.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Methods defined here:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, msg)</dt>
+<dd>Initialised with the Message object to which it is coupled.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>save</strong></a>(self)</dt>
+<dd>This method saves the report object into the table for that report class, returning the index as an integer.<br>
+It is not idempotent at this level; further constraints should be added by inheriting classes.</dd>
+</dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt>
+<a><strong>load</strong></a>(self, msgtxt) from __builtin__.classobj</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt>
+<strong>columned</strong> = False</dt></dl>
+
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><p>
+</p><table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<strong>Data</strong>
+</td>
+</tr>
+    
+<tr>
+<td>      </td>
+<td> </td>
+<td width="100%">
+<strong>DATABASES</strong> = {'default': {'ENGINE': 'django.db.backends.postgresql_psycopg2', 'HOST': 'localhost', 'NAME': 'thousanddays', 'PASSWORD': 'thousanddays', 'USER': 'thousanddays'}}<br>
+<strong>THE_DATABASE</strong> = &lt;connection object at 0x7f9609c8b0b0; dsn: 'dbna...password=xxxxxxxxxxxx host=localhost', closed: 0&gt;</td>
+</tr>
+</table>

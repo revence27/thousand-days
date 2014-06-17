@@ -1,4 +1,5 @@
 # encoding: utf-8
+# vim: expandtab ts=2
 
 from abc import ABCMeta, abstractmethod
 import re
@@ -240,7 +241,9 @@ class ThouMessage:
   # @staticmethod
   @classmethod
   def creation_sql(self, repc):
-    cols  = []
+    cols  = [('created_at', 'TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW()', 'No field class.', 'Created'),
+             #  ('modified_at', 'TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW()', 'No field class.', 'Modified')
+             ]
     col   = None
     for fld in self.fields:
       if type(fld) == type((1, 2)):
@@ -332,8 +335,8 @@ class ThouMessage:
           cur, err, etc  = fld.pull(fld, cod, etc)
           errors.extend([(e, fld) for e in err])
         fobs.append(cur)
-      except ThouFieldError, err:
-        errors.append((err.complaint, fld))
+      except Exception, err:
+        errors.append((str(err), fld))
     if etc.strip():
       errors.append('Superfluous text: "%s"' % (etc.strip(),))
     return klass(cod, fobs, errors)

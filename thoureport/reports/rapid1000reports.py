@@ -1,3 +1,4 @@
+# vim: expandtab ts=2
 from thoureport.reports.reports import *
 
 class RedReport(ThouReport):

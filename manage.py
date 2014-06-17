@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# vim: expandtab ts=2
 import os
 import sys
 

@@ -1,3 +1,4 @@
+# vim: expandtab ts=2
 """
 Django settings for thousand project.
 

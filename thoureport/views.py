@@ -1,3 +1,4 @@
+# vim: expandtab ts=2
 from django.contrib import messages as flashes
 from django.shortcuts import render, redirect
 from thoureport.messages.rapid1000messages import *
@@ -57,7 +58,7 @@ def error_messenger(dat, msgobj, fld):
   return reduce(applicant, TRANSFORMATIONS.keys(), fld)
 
 def smser(req):
-  msgs  = StoredSMS.objects.all()
+  msgs  = StoredSMS.objects.all().order_by('-when')
   return render(req, 'smser.html', {'msgs': msgs})
 
 def reports(req, rcode = None):
@@ -73,7 +74,7 @@ def reports(req, rcode = None):
   return render(req, 'reports.html', {'reps': reps, 'repset': REPORT_SET})
 
 def messages(req):
-  msgs  = StoredSMS.objects.all()
+  msgs  = StoredSMS.objects.all().order_by('-when')
   return render(req, 'messages.html', {'msgs': msgs})
 
 def resp_mod(req, cod):

@@ -1,0 +1,4838 @@
+
+
+Python: module rapid1000messages
+
+
+<table width="100%" summary="heading">
+<tr>
+<td> <br>
+ <br><strong>rapid1000messages</strong>
+</td>
+<td>
+<a href=".">index</a><br><a>/Users/revence/Documents/Hacks/thousand/thoureport/messages/rapid1000messages.py</a>
+</td>
+</tr>
+</table>
+    <p># encoding: utf-8<br>
+# vim: expandtab ts=2</p>
+<p>
+</p><table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<strong>Modules</strong>
+</td>
+</tr>
+    
+<tr>
+<td>      </td>
+<td> </td>
+<td width="100%"><table width="100%" summary="list"><tr>
+<td width="25%">
+<a href="psycopg2.html">psycopg2</a><br>
+</td>
+<td width="25%">
+<a href="re.html">re</a><br>
+</td>
+<td width="25%"></td>
+<td width="25%"></td>
+</tr></table></td>
+</tr>
+</table><p>
+</p><table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<strong>Classes</strong>
+</td>
+</tr>
+    
+<tr>
+<td>      </td>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>
+<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>
+</dt>
+<dd>
+<dl>
+<dt>
+<a href="rapid1000messages.html#ANCMessage">ANCMessage</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#BirMessage">BirMessage</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#ChildMessage">ChildMessage</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#DeathMessage">DeathMessage</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#DepMessage">DepMessage</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#NBCMessage">NBCMessage</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#PNCMessage">PNCMessage</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#PregMessage">PregMessage</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#RedMessage">RedMessage</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#RedResultMessage">RedResultMessage</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#RefMessage">RefMessage</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#ResultMessage">ResultMessage</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#RevMessage">RevMessage</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#RiskMessage">RiskMessage</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#UnknownMessage">UnknownMessage</a>
+</dt>
+</dl>
+</dd>
+<dt>
+<a href="rapid1000messages.html#ThouMsgError">ThouMsgError</a>
+</dt>
+<dt>
+<a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>
+</dt>
+<dd>
+<dl>
+<dt>
+<a href="rapid1000messages.html#CodeField">CodeField</a>
+</dt>
+<dd>
+<dl>
+<dt>
+<a href="rapid1000messages.html#DeathField">DeathField</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#FloatedField">FloatedField</a>
+</dt>
+<dd>
+<dl>
+<dt>
+<a href="rapid1000messages.html#MUACField">MUACField</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#WeightField">WeightField</a>
+</dt>
+</dl>
+</dd>
+<dt>
+<a href="rapid1000messages.html#GenderField">GenderField</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#HandwashField">HandwashField</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#HealthStatusField">HealthStatusField</a>
+</dt>
+<dd>
+<dl>
+<dt>
+<a href="rapid1000messages.html#MotherHealthStatusField">MotherHealthStatusField</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#NewbornHealthStatusField">NewbornHealthStatusField</a>
+</dt>
+</dl>
+</dd>
+<dt>
+<a href="rapid1000messages.html#InterventionField">InterventionField</a>
+</dt>
+<dd>
+<dl>
+<dt>
+<a href="rapid1000messages.html#NBCInterventionField">NBCInterventionField</a>
+</dt>
+</dl>
+</dd>
+<dt>
+<a href="rapid1000messages.html#LocationField">LocationField</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#NumberedField">NumberedField</a>
+</dt>
+<dd>
+<dl>
+<dt>
+<a href="rapid1000messages.html#ANCField">ANCField</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#HeightField">HeightField</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#NBCField">NBCField</a>
+</dt>
+<dd>
+<dl>
+<dt>
+<a href="rapid1000messages.html#BreastFeedField">BreastFeedField</a>
+</dt>
+</dl>
+</dd>
+<dt>
+<a href="rapid1000messages.html#PNCField">PNCField</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#VaccinationField">VaccinationField</a>
+</dt>
+<dd>
+<dl>
+<dt>
+<a href="rapid1000messages.html#VaccinationCompletionField">VaccinationCompletionField</a>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>
+<a href="rapid1000messages.html#PregCodeField">PregCodeField</a>
+</dt>
+<dd>
+<dl>
+<dt>
+<a href="rapid1000messages.html#PrevPregField">PrevPregField</a>
+</dt>
+</dl>
+</dd>
+<dt>
+<a href="rapid1000messages.html#SymptomCodeField">SymptomCodeField</a>
+</dt>
+<dd>
+<dl>
+<dt>
+<a href="rapid1000messages.html#RedSymptomCodeField">RedSymptomCodeField</a>
+</dt>
+</dl>
+</dd>
+<dt>
+<a href="rapid1000messages.html#ToiletField">ToiletField</a>
+</dt>
+</dl>
+</dd>
+<dt>
+<a href="rapid1000messages.html#DateField">DateField</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#IDField">IDField</a>
+</dt>
+<dd>
+<dl>
+<dt>
+<a href="rapid1000messages.html#PhoneBasedIDField">PhoneBasedIDField</a>
+</dt>
+</dl>
+</dd>
+<dt>
+<a href="rapid1000messages.html#NumberField">NumberField</a>
+</dt>
+<dd>
+<dl>
+<dt>
+<a href="rapid1000messages.html#GravidityField">GravidityField</a>
+</dt>
+<dt>
+<a href="rapid1000messages.html#ParityField">ParityField</a>
+</dt>
+</dl>
+</dd>
+<dt>
+<a href="rapid1000messages.html#TextField">TextField</a>
+</dt>
+</dl>
+</dd>
+</dl>
+ <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>ANCField</strong></a>(<a href="rapid1000messages.html#NumberedField">NumberedField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Ante-Natal Care visit number is a ... number.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#ANCField">ANCField</a></dd>
+<dd><a href="rapid1000messages.html#NumberedField">NumberedField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Matches the code, not insisting on the string that precedes the number.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>This method is to be extended to restrict fields to certain pre-determined codes.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>ANCMessage</strong></a>(<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Ante-natal care visit message.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt>
+<strong>fields</strong> = [&lt;class rapid1000messages.IDField&gt;, &lt;class rapid1000messages.DateField&gt;, &lt;class rapid1000messages.ANCField&gt;, (&lt;class rapid1000messages.SymptomCodeField&gt;, True), &lt;class rapid1000messages.LocationField&gt;, &lt;class rapid1000messages.WeightField&gt;]</dt></dl>
+
+<hr>
+Methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>BirMessage</strong></a>(<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Birth message.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt>
+<strong>fields</strong> = [&lt;class rapid1000messages.IDField&gt;, &lt;class rapid1000messages.NumberField&gt;, &lt;class rapid1000messages.DateField&gt;, &lt;class rapid1000messages.GenderField&gt;, (&lt;class rapid1000messages.SymptomCodeField&gt;, True), &lt;class rapid1000messages.LocationField&gt;, &lt;class rapid1000messages.BreastFeedField&gt;, &lt;class rapid1000messages.WeightField&gt;]</dt></dl>
+
+<hr>
+Methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>BreastFeedField</strong></a>(<a href="rapid1000messages.html#NBCField">NBCField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Breast-feeding code has new-born care fields.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#BreastFeedField">BreastFeedField</a></dd>
+<dd><a href="rapid1000messages.html#NBCField">NBCField</a></dd>
+<dd><a href="rapid1000messages.html#NumberedField">NumberedField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>The accepted codes. May be booleanisable.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#NBCField">NBCField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Matches the code, not insisting on the string that precedes the number.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>ChildMessage</strong></a>(<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Child message.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt>
+<strong>fields</strong> = [&lt;class rapid1000messages.IDField&gt;, &lt;class rapid1000messages.NumberField&gt;, &lt;class rapid1000messages.DateField&gt;, &lt;class rapid1000messages.VaccinationField&gt;, &lt;class rapid1000messages.VaccinationCompletionField&gt;, (&lt;class rapid1000messages.SymptomCodeField&gt;, True), &lt;class rapid1000messages.LocationField&gt;, &lt;class rapid1000messages.WeightField&gt;, &lt;class rapid1000messages.MUACField&gt;]</dt></dl>
+
+<hr>
+Methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>CodeField</strong></a>(<a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">This should match basically any simple code, plain and numbered.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a simple regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>This method is to be extended to restrict fields to certain pre-determined codes.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>DateField</strong></a>(<a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">The descriptor for valid message fields.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Class methods defined here:<br>
+<dl><dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt></dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>This method is to be extended to restrict fields to certain pre-determined codes.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>DeathField</strong></a>(<a href="rapid1000messages.html#CodeField">CodeField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Field for describing death codes.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#DeathField">DeathField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Expected death codes.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#CodeField">CodeField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a simple regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>DeathMessage</strong></a>(<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Death message.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt>
+<strong>fields</strong> = [&lt;class rapid1000messages.IDField&gt;, &lt;class rapid1000messages.NumberField&gt;, &lt;class rapid1000messages.DateField&gt;, &lt;class rapid1000messages.LocationField&gt;, &lt;class rapid1000messages.DeathField&gt;]</dt></dl>
+
+<hr>
+Methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>DepMessage</strong></a>(<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Departure message.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt>
+<strong>fields</strong> = [&lt;class rapid1000messages.IDField&gt;, &lt;class rapid1000messages.NumberField&gt;, &lt;class rapid1000messages.DateField&gt;]</dt></dl>
+
+<hr>
+Methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>FloatedField</strong></a>(<a href="rapid1000messages.html#CodeField">CodeField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Field for codes that carry fractional numbers with decimal points.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#FloatedField">FloatedField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>This method is to be extended to restrict fields to certain pre-determined codes.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>GenderField</strong></a>(<a href="rapid1000messages.html#CodeField">CodeField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Gender is a a code.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#GenderField">GenderField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Boy or girl?</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#CodeField">CodeField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a simple regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>GravidityField</strong></a>(<a href="rapid1000messages.html#NumberField">NumberField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Gravity is a number.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#GravidityField">GravidityField</a></dd>
+<dd><a href="rapid1000messages.html#NumberField">NumberField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#NumberField">NumberField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>This method is to be extended to restrict fields to certain pre-determined codes.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>HandwashField</strong></a>(<a href="rapid1000messages.html#CodeField">CodeField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Field for codes concerning handwwashing basic.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#HandwashField">HandwashField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Hand-wash or no hand-wash?</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#CodeField">CodeField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a simple regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>HealthStatusField</strong></a>(<a href="rapid1000messages.html#CodeField">CodeField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">General health status field.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#HealthStatusField">HealthStatusField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl><dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#CodeField">CodeField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a simple regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>HeightField</strong></a>(<a href="rapid1000messages.html#NumberedField">NumberedField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Field for height codes.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#HeightField">HeightField</a></dd>
+<dd><a href="rapid1000messages.html#NumberedField">NumberedField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#NumberedField">NumberedField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>This method is to be extended to restrict fields to certain pre-determined codes.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>IDField</strong></a>(<a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">The commonly-used ID field.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, ans) from __builtin__.classobj</dt>
+<dd>For now, checks are limited to length assurance.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>This method is to be extended to restrict fields to certain pre-determined codes.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>InterventionField</strong></a>(<a href="rapid1000messages.html#CodeField">CodeField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Field for general interventions.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#InterventionField">InterventionField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Intervention codes.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#CodeField">CodeField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a simple regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>LocationField</strong></a>(<a href="rapid1000messages.html#CodeField">CodeField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Field for codes that communicate locations.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#LocationField">LocationField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>The codes for RED alerts.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#CodeField">CodeField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a simple regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>MUACField</strong></a>(<a href="rapid1000messages.html#FloatedField">FloatedField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">MUAC is a decimal float.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#MUACField">MUACField</a></dd>
+<dd><a href="rapid1000messages.html#FloatedField">FloatedField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Regex alert.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>This method is to be extended to restrict fields to certain pre-determined codes.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>MotherHealthStatusField</strong></a>(<a href="rapid1000messages.html#HealthStatusField">HealthStatusField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Mother health status fields.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#MotherHealthStatusField">MotherHealthStatusField</a></dd>
+<dd><a href="rapid1000messages.html#HealthStatusField">HealthStatusField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Mother health codes.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#CodeField">CodeField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a simple regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>NBCField</strong></a>(<a href="rapid1000messages.html#NumberedField">NumberedField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">New-Born Care visit number is a ... number.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#NBCField">NBCField</a></dd>
+<dd><a href="rapid1000messages.html#NumberedField">NumberedField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Pre-enforcing the discipline that `is_legal` does not enforce.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Matches the code, not insisting on the string that precedes the number.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>NBCInterventionField</strong></a>(<a href="rapid1000messages.html#InterventionField">InterventionField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">New-born care intervention field.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#NBCInterventionField">NBCInterventionField</a></dd>
+<dd><a href="rapid1000messages.html#InterventionField">InterventionField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#InterventionField">InterventionField</a>:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Intervention codes.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#CodeField">CodeField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a simple regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>NBCMessage</strong></a>(<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">New-born care message.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt>
+<strong>fields</strong> = [&lt;class rapid1000messages.IDField&gt;, &lt;class rapid1000messages.NumberField&gt;, &lt;class rapid1000messages.NBCField&gt;, &lt;class rapid1000messages.DateField&gt;, (&lt;class rapid1000messages.SymptomCodeField&gt;, True), &lt;class rapid1000messages.BreastFeedField&gt;, &lt;class rapid1000messages.NBCInterventionField&gt;, &lt;class rapid1000messages.NewbornHealthStatusField&gt;]</dt></dl>
+
+<hr>
+Methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>NewbornHealthStatusField</strong></a>(<a href="rapid1000messages.html#HealthStatusField">HealthStatusField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">New born health status is a ... health status.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#NewbornHealthStatusField">NewbornHealthStatusField</a></dd>
+<dd><a href="rapid1000messages.html#HealthStatusField">HealthStatusField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>New born health status codes.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#CodeField">CodeField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a simple regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>NumberField</strong></a>(<a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">The descriptor for number fields.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>This method is to be extended to restrict fields to certain pre-determined codes.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>NumberedField</strong></a>(<a href="rapid1000messages.html#CodeField">CodeField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Field for codes that carry whole numbers.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#NumberedField">NumberedField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>This method is to be extended to restrict fields to certain pre-determined codes.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>PNCField</strong></a>(<a href="rapid1000messages.html#NumberedField">NumberedField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Post-Natal Care visit number is a ... number.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#PNCField">PNCField</a></dd>
+<dd><a href="rapid1000messages.html#NumberedField">NumberedField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Matches the code, not insisting on the string that precedes the number.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>This method is to be extended to restrict fields to certain pre-determined codes.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>PNCMessage</strong></a>(<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Post-natal care message.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt>
+<strong>fields</strong> = [&lt;class rapid1000messages.IDField&gt;, &lt;class rapid1000messages.PNCField&gt;, &lt;class rapid1000messages.DateField&gt;, (&lt;class rapid1000messages.SymptomCodeField&gt;, True), &lt;class rapid1000messages.InterventionField&gt;, &lt;class rapid1000messages.MotherHealthStatusField&gt;]</dt></dl>
+
+<hr>
+Methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>ParityField</strong></a>(<a href="rapid1000messages.html#NumberField">NumberField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Parity is a number.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#ParityField">ParityField</a></dd>
+<dd><a href="rapid1000messages.html#NumberField">NumberField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#NumberField">NumberField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>This method is to be extended to restrict fields to certain pre-determined codes.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>PhoneBasedIDField</strong></a>(<a href="rapid1000messages.html#IDField">IDField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">The alternative ID field, incorporating phone number.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#PhoneBasedIDField">PhoneBasedIDField</a></dd>
+<dd><a href="rapid1000messages.html#IDField">IDField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basic regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>This method is to be extended to restrict fields to certain pre-determined codes.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>PregCodeField</strong></a>(<a href="rapid1000messages.html#CodeField">CodeField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Field for Pregnancy codes.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#PregCodeField">PregCodeField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>These are all the codes related to pregnancy.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#CodeField">CodeField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a simple regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>PregMessage</strong></a>(<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Pregnancy message.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt>
+<strong>fields</strong> = [&lt;class rapid1000messages.IDField&gt;, &lt;class rapid1000messages.DateField&gt;, &lt;class rapid1000messages.DateField&gt;, &lt;class rapid1000messages.GravidityField&gt;, &lt;class rapid1000messages.ParityField&gt;, (&lt;class rapid1000messages.PregCodeField&gt;, True), (&lt;class rapid1000messages.SymptomCodeField&gt;, True), &lt;class rapid1000messages.LocationField&gt;, &lt;class rapid1000messages.WeightField&gt;, &lt;class rapid1000messages.ToiletField&gt;, &lt;class rapid1000messages.HandwashField&gt;]</dt></dl>
+
+<hr>
+Methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>PrevPregField</strong></a>(<a href="rapid1000messages.html#PregCodeField">PregCodeField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Field for Previous pregnancy codes.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#PrevPregField">PrevPregField</a></dd>
+<dd><a href="rapid1000messages.html#PregCodeField">PregCodeField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Codes associated with previous pregnancy.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#CodeField">CodeField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a simple regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>RedMessage</strong></a>(<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Red alert message.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt>
+<strong>fields</strong> = [(&lt;class rapid1000messages.RedSymptomCodeField&gt;, True), &lt;class rapid1000messages.LocationField&gt;]</dt></dl>
+
+<hr>
+Methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>RedResultMessage</strong></a>(<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Red alert result message.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt>
+<strong>fields</strong> = [&lt;class rapid1000messages.IDField&gt;, &lt;class rapid1000messages.DateField&gt;, (&lt;class rapid1000messages.SymptomCodeField&gt;, True), &lt;class rapid1000messages.LocationField&gt;, &lt;class rapid1000messages.InterventionField&gt;, &lt;class rapid1000messages.MotherHealthStatusField&gt;]</dt></dl>
+
+<hr>
+Methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>RedSymptomCodeField</strong></a>(<a href="rapid1000messages.html#SymptomCodeField">SymptomCodeField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Field for codes associated with symptoms.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#RedSymptomCodeField">RedSymptomCodeField</a></dd>
+<dd><a href="rapid1000messages.html#SymptomCodeField">SymptomCodeField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>These are the codes in red alerts.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#CodeField">CodeField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a simple regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>RefMessage</strong></a>(<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Referral message.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt>
+<strong>fields</strong> = [&lt;class rapid1000messages.PhoneBasedIDField&gt;]</dt></dl>
+
+<hr>
+Methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>ResultMessage</strong></a>(<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Result message.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt>
+<strong>fields</strong> = [&lt;class rapid1000messages.IDField&gt;, (&lt;class rapid1000messages.SymptomCodeField&gt;, True), &lt;class rapid1000messages.LocationField&gt;, &lt;class rapid1000messages.InterventionField&gt;, &lt;class rapid1000messages.MotherHealthStatusField&gt;]</dt></dl>
+
+<hr>
+Methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>RevMessage</strong></a>(<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Testing message. Takes any number of legal fields.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt>
+<strong>fields</strong> = [(&lt;class rapid1000messages.TextField&gt;, True)]</dt></dl>
+
+<hr>
+Methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>RiskMessage</strong></a>(<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Risk report message.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt>
+<strong>fields</strong> = [&lt;class rapid1000messages.IDField&gt;, (&lt;class rapid1000messages.SymptomCodeField&gt;, True), &lt;class rapid1000messages.LocationField&gt;, &lt;class rapid1000messages.WeightField&gt;]</dt></dl>
+
+<hr>
+Methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>SymptomCodeField</strong></a>(<a href="rapid1000messages.html#CodeField">CodeField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Field for codes associated with symptoms.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#SymptomCodeField">SymptomCodeField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>These are the codes associated with symptoms.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#CodeField">CodeField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a simple regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>TextField</strong></a>(<a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">What I call <a href="#TextField">TextField</a> is really a RevNameField.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Only my names are legal here.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended to restrict fields, in the event that the `expectations` mechanism is insufficient.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>ThouMessage</strong></a>
+</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Base class describing the standard RapidSMS 1000 Days message.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Methods defined here:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+<dl><dt>
+<strong>fields</strong> = []</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>ThouMsgError</strong></a>
+</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Unused.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Methods defined here:<br>
+<dl><dt>
+<a><strong>__init__</strong></a>(self, errors)</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>ToiletField</strong></a>(<a href="rapid1000messages.html#CodeField">CodeField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Field for codes concerning toilets.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#ToiletField">ToiletField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Toilet or no toilet?</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#CodeField">CodeField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a simple regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>UnknownMessage</strong></a>(<a href="rapid1000messages.html#ThouMessage">ThouMessage</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">To the Unknown Message.<br>
+Since every message has to be successfully parsed as a Message object, this is the one in the event that none other matches.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">Methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt>
+<a><strong>__exit__</strong></a>(self, tp, val, tb)</dt></dl>
+
+<dl><dt>
+<a><strong>__init__</strong></a>(self, cod, fobs, errs)</dt></dl>
+
+<dl><dt>
+<a><strong>semantics_check</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>create_in_db</strong></a>(self, repc) from __builtin__.classobj</dt></dl>
+
+<dl>
+<dt>
+<a><strong>creation_sql</strong></a>(self, repc) from __builtin__.classobj</dt>
+<dd># @staticmethod</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<a><strong>caseless_hash</strong></a>(hsh)</dt></dl>
+
+<dl><dt>
+<a><strong>parse</strong></a>(msg)</dt></dl>
+
+<dl><dt>
+<a><strong>parse_report</strong></a>(msg, fh, hsh, **kwargs)</dt></dl>
+
+<dl>
+<dt>
+<a><strong>process</strong></a>(klass, cod, msg)</dt>
+<dd># “Private”</dd>
+</dl>
+
+<dl><dt>
+<a><strong>pull_code</strong></a>(msg)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="rapid1000messages.html#ThouMessage">ThouMessage</a>:<br>
+<dl><dt>
+<strong>created</strong> = False</dt></dl>
+
+<dl><dt>
+<strong>fields</strong> = []</dt></dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>VaccinationCompletionField</strong></a>(<a href="rapid1000messages.html#VaccinationField">VaccinationField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Vaccination Completion fields.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#VaccinationCompletionField">VaccinationCompletionField</a></dd>
+<dd><a href="rapid1000messages.html#VaccinationField">VaccinationField</a></dd>
+<dd><a href="rapid1000messages.html#NumberedField">NumberedField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Levels of vaccination checkpoints.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#NumberedField">NumberedField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>VaccinationField</strong></a>(<a href="rapid1000messages.html#NumberedField">NumberedField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Vaccination Completion is apparently a number.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#VaccinationField">VaccinationField</a></dd>
+<dd><a href="rapid1000messages.html#NumberedField">NumberedField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>The vaccination completion codes.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#NumberedField">NumberedField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table> <p>
+</p>
+<table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<a>class <strong>WeightField</strong></a>(<a href="rapid1000messages.html#FloatedField">FloatedField</a>)</td>
+</tr>
+    
+<tr>
+<td rowspan="2">   </td>
+<td colspan="2">Field for weight codes.<br> </td>
+</tr>
+<tr>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>Method resolution order:</dt>
+<dd><a href="rapid1000messages.html#WeightField">WeightField</a></dd>
+<dd><a href="rapid1000messages.html#FloatedField">FloatedField</a></dd>
+<dd><a href="rapid1000messages.html#CodeField">CodeField</a></dd>
+<dd><a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a></dd>
+</dl>
+<hr>
+Class methods inherited from <a href="rapid1000messages.html#FloatedField">FloatedField</a>:<br>
+<dl>
+<dt>
+<a><strong>is_legal</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>Basically a regex.</dd>
+</dl>
+
+<hr>
+Methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>__init__</strong></a>(self, val, many)</dt>
+<dd>Initialise the field and its associated value `val`, specifying whether it is one of `many` associated as a group with the message.</dd>
+</dl>
+
+<hr>
+Class methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>dbtype</strong></a>(self, it=None) from __builtin__.classobj</dt>
+<dd>Field-level specificiation of the SQL data type to give to the database column that will hold the data held by this field.<br>
+TODO: At present, every field is supposed to be a TEXT. This is clearly false in the case of dates, for instance.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>dbvalue</strong></a>(self, it, kasa) from __builtin__.classobj</dt>
+<dd>Returns the value if `it` escaped with the database cursor `kasa`.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>default_dbvalue</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the string that represents the default DB value.<br>
+TODO: Currently gives no heed to the opinions of the field itself.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>display</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the descriptive name of this field (useful for displaying database columns without listing the unsigtly column name).</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expectations</strong></a>(self) from __builtin__.classobj</dt>
+<dd>This method is to be extended to restrict fields to certain pre-determined codes.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>expected</strong></a>(self, fld) from __builtin__.classobj</dt>
+<dd>This method is to be extended if the `expectations` mechanism is almost sufficient, but requires some elaborate validation.<br>
+This default one works best on the simple codes that we have, not every possible thing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>fixed_for_db</strong></a>(self, val) from __builtin__.classobj</dt>
+<dd>Field-level specification of the necessary escapes for sanitising the data for SQL.<br>
+TODO: This only passes because we are using simple, plain codes in testing.</dd>
+</dl>
+
+<dl>
+<dt>
+<a><strong>subname</strong></a>(self) from __builtin__.classobj</dt>
+<dd>Returns the name of this field as it would be used in composing a column name.</dd>
+</dl>
+
+<hr>
+Static methods inherited from <a href="thoureport.messages.parser.html#ThouField">thoureport.messages.parser.ThouField</a>:<br>
+<dl>
+<dt>
+<a><strong>pull</strong></a>(self, cod, txt, many=False)</dt>
+<dd>A field will process thestring `txt` to parse of a valid object of its class (passed in as `self` and linked to the SMS code passed in as `cod`).<br>
+Error cases are communicated as single-token error codes, strings that should be short, and unique for every error case.<br>
+Returns a triple: the resulting Message object, the array of error codes, and the part of `txt` that has not been consumed to produce the Message object.</dd>
+</dl>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><p>
+</p><table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<strong>Functions</strong>
+</td>
+</tr>
+    
+<tr>
+<td>      </td>
+<td> </td>
+<td width="100%">
+<dl>
+<dt>
+<a><strong>first_cap</strong></a>(s)</dt>
+<dd>Capitalises the first letter (without assaulting the others like Ruby's #capitalize does).</dd>
+</dl>
+</td>
+</tr>
+</table><p>
+</p><table width="100%" summary="section">
+<tr>
+<td colspan="3"> <br>
+<strong>Data</strong>
+</td>
+</tr>
+    
+<tr>
+<td>      </td>
+<td> </td>
+<td width="100%">
+<strong>MSG_ASSOC</strong> = {'ANC': &lt;class rapid1000messages.ANCMessage&gt;, 'BIR': &lt;class rapid1000messages.BirMessage&gt;, 'CHI': &lt;class rapid1000messages.ChildMessage&gt;, 'DEP': &lt;class rapid1000messages.DepMessage&gt;, 'DTH': &lt;class rapid1000messages.DeathMessage&gt;, 'NBC': &lt;class rapid1000messages.NBCMessage&gt;, 'PNC': &lt;class rapid1000messages.PNCMessage&gt;, 'PRE': &lt;class rapid1000messages.PregMessage&gt;, 'RAR': &lt;class rapid1000messages.RedResultMessage&gt;, 'RED': &lt;class rapid1000messages.RedMessage&gt;, ...}<br>
+<strong>db</strong> = &lt;connection object at 0x7fadfa53c730; dsn: 'dbna...password=xxxxxxxxxxxx host=localhost', closed: 0&gt;</td>
+</tr>
+</table>

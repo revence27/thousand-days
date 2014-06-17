@@ -16,6 +16,8 @@ class Doc
     _, rst  = txt.split(/<body[^>]*>/i, 2)
     ans = rst.split(/<\/body>/i).first
     ans.gsub(/<(\/)?font[^>]*>/, '').gsub(/ bgcolor="[^"]+"/, '').gsub(/<tt>/, '<div class="codikos">').gsub('</tt>', '</div>')
+  rescue Exception => e
+    txt
   end
 
   def to_html
